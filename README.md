@@ -1,2 +1,0 @@
-# LojaVirtual
-Projeto de PHP

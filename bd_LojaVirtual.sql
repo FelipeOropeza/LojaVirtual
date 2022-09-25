@@ -287,3 +287,4 @@ values(default, 'Olidio Junior', 'olidio@hotmail.com', 'etec20', 0, 'Rua Pompeia
        'São Paulo', '06585-140');
        
 select * from tbl_usuario;
+truncate tbl_usuario;

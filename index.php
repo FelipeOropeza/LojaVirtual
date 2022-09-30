@@ -25,7 +25,7 @@
     include 'nav.php';
     include 'cabecalho.html';
 
-    $consulta = $cn->query('select nm_livro, vl_preco, ds_capa, qt_estoque from vm_livro;');
+    $consulta = $cn->query('select cd_livro, nm_livro, vl_preco, ds_capa, qt_estoque from vm_livro;');
     ?>
 
     <div class="container-fluid">
@@ -37,9 +37,11 @@
                 <div><h5>R$ <?php echo number_format($exibe['vl_preco'],2, ',','.'); ?></h5></div>
 
                 <div class="text-center">
+                    <a href="detalhes.php?cd=<?php echo $exibe['cd_livro']; ?>">
                     <button class="btn btn-lg btn-block btn-default">
                         <span class="glyphicon glyphicon-info-sign" style="color:cadetblue"> Detalhes</span>
                     </button>
+                    </a>
                 </div>
                 <div class="text-center" style="margin-top:5px; margin-bottom:5px;">
                     <?php if($exibe['qt_estoque'] > 0 ) { ?>

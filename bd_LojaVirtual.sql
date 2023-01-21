@@ -288,3 +288,5 @@ values(default, 'Olidio Junior', 'olidio@hotmail.com', 'etec20', 0, 'Rua Pompeia
        
 select * from tbl_usuario;
 truncate tbl_usuario;
+
+select * from vm_livro where nm_livro like 'W%';

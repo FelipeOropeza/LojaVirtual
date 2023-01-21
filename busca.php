@@ -39,11 +39,12 @@
 		<div class="col-sm-5"><h4 style="padding-top:20px"><?php echo $exibe['nm_livro']; ?></h4></div>
 		<div class="col-sm-2"><h4 style="padding-top:20px">R$ <?php echo number_format($exibe['vl_preco'],2, ',','.'); ?></h4></div>
 		<div class="col-sm-2 col-xs-offset-right-1" style="padding-top:20px">
-            <a href="detalhes.php?cd=<?php echo $exibe['cd_livro']; ?>"></a>
-        <button class="btn btn-lg btn-block btn-default">
-		<span class="glyphicon glyphicon-info-sign" style="color: cadetblue;"> Detalhes</span>
-		</button>
-		</div> 
+            <a href="detalhes.php?cd=<?php echo $exibe['cd_livro']; ?>">
+            <button class="btn btn-lg btn-block btn-default">
+            <span class="glyphicon glyphicon-info-sign" style="color:cadetblue"> Detalhes</span>
+            </button>
+            </a>
+        </div>
 	</div>
     <?php } ?>
 </div>

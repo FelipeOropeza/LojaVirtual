@@ -289,4 +289,13 @@ values(default, 'Olidio Junior', 'olidio@hotmail.com', 'etec20', 0, 'Rua Pompeia
 select * from tbl_usuario;
 truncate tbl_usuario;
 
-select * from vm_livro where nm_livro like 'W%';
+select * from vm_livro;
+
+update tbl_livro set ds_capa = "bigdata.jpg" where cd_livro = 9;
+update tbl_livro set ds_capa = "git.jpg" where cd_livro = 10;
+update tbl_livro set ds_capa = "ux.jpg" where cd_livro = 11;
+update tbl_livro set ds_capa = "linux.jpg" where cd_livro = 12;
+update tbl_livro set ds_capa = "entregaandroid.jpg" where cd_livro = 13;
+update tbl_livro set ds_capa = "mcsa.jpg" where cd_livro = 14;
+
+delete from tbl_livro where cd_livro = 15;

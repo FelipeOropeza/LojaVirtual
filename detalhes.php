@@ -41,7 +41,7 @@
 	<div class="row">	
 		 <div class="col-sm-4 col-sm-offset-1">
 			 <h1>Detalhes do Produto</h1>	 
-			 <img src="imagens/<?php echo $exibe['ds_capa'];?>.jpg" class="img-responsive" style="width:100%;">
+			 <img src="imagens/<?php echo $exibe['ds_capa'];?>" class="img-responsive" style="width:100%;">
 		</div>				
  		 <div class="col-sm-7"><h1><?php echo $exibe['nm_livro'];?></h1>	
 		<p><?php echo $exibe['ds_resumo_obra'];?></p>		

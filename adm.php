@@ -25,25 +25,29 @@
 	include 'conexao.php';	
 	include 'nav.php';
 	include 'cabecalho.html';
-	?>
+?>
 	<div class="container-fluid">
 		<div class="row">		
 			<div class="col-sm-4 col-sm-offset-4 text-center">			
 				<h2>Área administrativa</h2>			
 				<a href="formProduto.php">			
-				<button type="submit" class="btn btn-block btn-lg btn-primary">				
-					Incluir Produto			
-				</button>			
-				</a>					
-				<button type="submit" class="btn btn-block btn-lg btn-warning">				
-					Alterar / Excluir Produto					
-				</button>			
+					<button type="submit" class="btn btn-block btn-lg btn-primary">				
+						Incluir Produto			
+					</button>			
+				</a>
+				<a href="lista.php">					
+					<button type="submit" class="btn btn-block btn-lg btn-warning">				
+						Alterar / Excluir Produto					
+					</button>
+				</a>
 				<button type="submit" class="btn btn-block btn-lg btn-success">
 					Vendas
-				</button>			
-				<button type="submit" class="btn btn-block btn-lg btn-danger">
-					Sair da àrea administrativa
-				</button>	
+				</button>
+				<a href="sair.php">
+					<button type="submit" class="btn btn-block btn-lg btn-danger">
+						Sair da àrea administrativa
+					</button>
+				</a>
 			</div>
 		</div>
 	</div>

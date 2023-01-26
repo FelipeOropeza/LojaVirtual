@@ -33,6 +33,7 @@
         <button type="submit" class="btn btn-default">Pesquisar</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="carrinho.php"><span class="glyphicon glyphicon-shopping-cart"></span> Carrinho</a></li>
         <li><a href="#">Contato</a></li>
 
         <?php if(empty($_SESSION['ID'])) { ?>

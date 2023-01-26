@@ -291,11 +291,14 @@ truncate tbl_usuario;
 
 select * from vm_livro;
 
-update tbl_livro set ds_capa = "bigdata.jpg" where cd_livro = 9;
-update tbl_livro set ds_capa = "git.jpg" where cd_livro = 10;
-update tbl_livro set ds_capa = "ux.jpg" where cd_livro = 11;
-update tbl_livro set ds_capa = "linux.jpg" where cd_livro = 12;
-update tbl_livro set ds_capa = "entregaandroid.jpg" where cd_livro = 13;
-update tbl_livro set ds_capa = "mcsa.jpg" where cd_livro = 14;
+update tbl_livro set ds_capa = "ionic.jpg" where cd_livro = 39;
+update tbl_livro set ds_capa = "css.jpg" where cd_livro = 40;
+update tbl_livro set ds_capa = "bigdata.jpg" where cd_livro = 41;
+update tbl_livro set ds_capa = "git.jpg" where cd_livro = 42;
+update tbl_livro set ds_capa = "ux.jpg" where cd_livro = 43;
+update tbl_livro set ds_capa = "linux.jpg" where cd_livro = 44;
+update tbl_livro set ds_capa = "entregaandroid.jpg" where cd_livro = 45;
+update tbl_livro set ds_capa = "mcsa.jpg" where cd_livro = 46;
 
-delete from tbl_livro where cd_livro = 15;
+
+delete from tbl_livro where cd_livro = 14;

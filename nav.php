@@ -44,7 +44,7 @@
           $consulta_usuario = $cn->query("select nm_usuario from tbl_usuario where cd_usuario = '$_SESSION[ID]'");
           $exibe_usuario = $consulta_usuario->fetch(PDO::FETCH_ASSOC);
         ?>
-        <li><a href="#"><span class="glyphicon glyphicon-user"> <?php echo $exibe_usuario['nm_usuario'];?> </span></a></li>
+        <li><a href="areauser.php"><span class="glyphicon glyphicon-user"> <?php echo $exibe_usuario['nm_usuario'];?> </span></a></li>
         <li><a href="sair.php"><span class="glyphicon glyphicon-log-out"> Sair</span></a></li>
         <?php } else {?>
           <li><a href="adm.php"><button class="btn btn-sm btn-danger">Administrador</button></a></li>

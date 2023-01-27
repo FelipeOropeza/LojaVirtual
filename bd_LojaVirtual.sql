@@ -300,5 +300,34 @@ update tbl_livro set ds_capa = "linux.jpg" where cd_livro = 44;
 update tbl_livro set ds_capa = "entregaandroid.jpg" where cd_livro = 45;
 update tbl_livro set ds_capa = "mcsa.jpg" where cd_livro = 46;
 
-
 delete from tbl_livro where cd_livro = 14;
+
+create table tbl_vendas(
+	cd_venda int(11) primary key auto_increment,
+    no_Ticket varchar(13) not null,
+    cd_cliente int(11) not null,
+    cd_livro int(11) not null,
+    qt_livro int(11) not null,
+    vl_item decimal(10,2) not null,
+    vl_total_item decimal(10,2) generated always as ((qt_livro * vl_item)) virtual,
+    dt_venda date not null
+); 
+
+drop table tbl_vendas;
+select * from tbl_vendas;
+
+insert into tbl_vendas (no_Ticket, cd_cliente, cd_livro, qt_livro, vl_item, dt_venda) 
+values(11122334456, 2, 40, 2, 52.00, '2023-01-25');
+
+create view vm_Venda
+as select
+	tbl_vendas.no_Ticket,
+    tbl_vendas.cd_cliente,
+    tbl_vendas.dt_venda,
+	tbl_livro.nm_livro,
+    tbl_vendas.qt_livro,
+    tbl_vendas.vl_total_item
+from tbl_vendas inner join tbl_livro
+on tbl_vendas.cd_livro = tbl_livro.cd_livro;
+
+select * from vm_Venda;

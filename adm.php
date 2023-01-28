@@ -41,9 +41,11 @@
 						Alterar / Excluir Produto					
 					</button>
 				</a>
-				<button type="submit" class="btn btn-block btn-lg btn-success">
-					Vendas
-				</button>
+				<a href="vendas.php">
+					<button type="submit" class="btn btn-block btn-lg btn-success">
+						Vendas
+					</button>
+				</a>
 				<a href="sair.php">
 					<button type="submit" class="btn btn-block btn-lg btn-danger">
 						Sair da àrea administrativa

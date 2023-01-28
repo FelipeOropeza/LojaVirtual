@@ -45,22 +45,27 @@
         else {
             $data = $_GET['data'];
             $consulta = $cn->query("select * from vm_Venda where dt_venda = '$data'");
+			    if($consulta->rowCount() == 0){
+        echo "<html><script>location.href='erro3.php'</script></html>";
+    	}
     ?>
 <div class="container-fluid">
     <div class="row" style="margin-top: 15px;">
 		<div class="col-sm-1 col-sm-offset-1"><h4>Data</h4> </div>
-		<div class="col-sm-2"><h4>Ticket </h4></div>
-		<div class="col-sm-5"><h4>Produto</h4></div>
+		<div class="col-sm-1"><h4>Cliente</h4></div>
+		<div class="col-sm-1"><h4>Ticket</h4></div>
+		<div class="col-sm-4"><h4>Produto</h4></div>
 		<div class="col-sm-1"><h4>Quantidade</h4></div>
-		<div class="col-sm-2"><h4>Preço</h4></div>			
+		<div class="col-sm-1"><h4>Preço</h4></div>			
 	</div>
     <?php while($exibeVenda = $consulta->fetch(PDO::FETCH_ASSOC)){ ?>
 	<div class="row" style="margin-top: 15px;">		
 		<div class="col-sm-1 col-sm-offset-1"><?php echo date('d/m/Y',strtotime($exibeVenda['dt_venda']));?></div>
-		<div class="col-sm-2"><?php echo $exibeVenda['no_Ticket'];?></div>
-		<div class="col-sm-5"><?php echo $exibeVenda['nm_livro'];?></div>
+		<div class="col-sm-1"><?php echo $exibeVenda['nm_usuario'];?></div>
+		<div class="col-sm-1"><?php echo $exibeVenda['no_Ticket'];?></div>
+		<div class="col-sm-4"><?php echo $exibeVenda['nm_livro'];?></div>
 		<div class="col-sm-1"><?php echo $exibeVenda['qt_livro'];?></div>
-		<div class="col-sm-2"><?php echo number_format($exibeVenda['vl_total_item'],2,',','.');?></div>				
+		<div class="col-sm-1"><?php echo number_format($exibeVenda['vl_total_item'],2,',','.');?></div>				
 	</div>	
     <?php }} ?>
 </div>

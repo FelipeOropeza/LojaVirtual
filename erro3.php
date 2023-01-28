@@ -27,7 +27,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-4 col-sm-offset-4 text-center">
-				<h2>Nenhum livro foi  encontrado !!!</h2>		
+				<h2>Nenhuma venda foi encontrada !!</h2>		
 			</div>
 		</div>
 	</div>
